@@ -1,5 +1,8 @@
 import pyautogui as pg
 import actions
+import keyboard
+import constants
+import json
 
 #Abrir OBS                    
 #Deixar OBS em modo janela grande
@@ -7,22 +10,24 @@ import actions
 #Rodar o main.py
 
 pg.useImageNotFoundException(False)
-# actions.kill_monster()
-pg.displayMousePosition()
 
+def run():
+    with open(f'{constants.FOLDER_NAME}\\infos.json', 'r') as file:
+        coordinates = json.loads(file.read())
+    for coordinate in coordinates:
+        actions.kill_monster()
+        actions.get_loot()
+        actions.go_to_flag(coordinate['path'], coordinate['wait'])
+        if actions.check_player_position:
+            actions.kill_monster()
+            actions.get_loot()
+            actions.go_to_flag(coordinate['path'], coordinate['wait'])
+        actions.eat_food()
+        actions.down_hole(coordinate['down_hole'])
+        actions.up_hole(coordinate['up_hole'], f'{constants.FOLDER_NAME}\\anchor-floor-02.png', 420, 0)
+        actions.up_hole(coordinate['up_hole'], f'{constants.FOLDER_NAME}\\anchor-floor-03.png', 147, 120)
 
-# while True:
-#     image = attacking_monster()
-#     if image:
-#         print('Já está atacando um monstro')
-#         print(image)
-#         screenshot = pg.screenshot(region=(1571, 437, 22, 4))
-#         screenshot.save('captura_monstro.png')
-#     else:
-#         print('Não está atacando um monstro')
-#         print(image)
-      
-
+run()
 
 
 
