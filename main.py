@@ -29,24 +29,9 @@ def run():
         actions.up_hole(coordinate['up_hole'], f'{constants.FOLDER_NAME}\\anchor-floor-02.png', 420, 0)
         actions.up_hole(coordinate['up_hole'], f'{constants.FOLDER_NAME}\\anchor-floor-03.png', 147, 120)
 
-             
-# keyboard.wait('h')
-# run()
-
+keyboard.wait('h')
 while True:
-    keyboard.wait('h')
-    box = actions.attacking_monster()
-    if box:
-        print(f'Imagem encontrada na região: {box}')  # Exibe a coordenada e o tamanho da box encontrada
-        # Converta os valores da box em inteiros simples
-        box_int = (int(box.left), int(box.top), int(box.width), int(box.height))
-        # Capturar a screenshot da região que a imagem foi encontrada
-        screenshot = pg.screenshot(region=box_int)
-        screenshot.save('captura_monstro.png')
-        print('Screenshot salva como captura_monstro.png')
-    else:
-        print('Imagem não encontrada')
-
+    run()
 
 
      

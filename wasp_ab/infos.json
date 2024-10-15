@@ -3,84 +3,84 @@
         "path": "wasp_ab\\flag_0.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 10
+        "wait": 8
     },
     {
         "path": "wasp_ab\\flag_1.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 10
+        "wait": 6
     },
     {
         "path": "wasp_ab\\flag_2.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 10
+        "wait": 8
     },
     {
         "path": "wasp_ab\\flag_3.png",
         "down_hole": 1,
         "up_hole": 0,
-        "wait": 10
+        "wait": 8
     },
     {
         "path": "wasp_ab\\flag_4.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 16
+        "wait": 10
     },
     {
         "path": "wasp_ab\\flag_5.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 13
+        "wait": 10
     },
     {
         "path": "wasp_ab\\flag_6.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 23
+        "wait": 12
     },
     {
         "path": "wasp_ab\\flag_7.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 16
+        "wait": 6
     },
     {
         "path": "wasp_ab\\flag_8.png",
         "down_hole": 1,
         "up_hole": 0,
-        "wait": 28
+        "wait": 16
     },
     {
         "path": "wasp_ab\\flag_9.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 15
+        "wait": 11
     },
     {
         "path": "wasp_ab\\flag_10.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 15
+        "wait": 13
     },
     {
         "path": "wasp_ab\\flag_11.png",
         "down_hole": 0,
         "up_hole": 1,
-        "wait": 15
+        "wait": 10
     },
     {
         "path": "wasp_ab\\flag_12.png",
         "down_hole": 0,
         "up_hole": 0,
-        "wait": 18
+        "wait": 12
     },
     {
         "path": "wasp_ab\\flag_13.png",
         "down_hole": 0,
         "up_hole": 1,
-        "wait": 10
+        "wait": 7
     }
 ]

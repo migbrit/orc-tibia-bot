@@ -4,15 +4,18 @@ import constants
 def battle_empty():
     return pg.locateOnScreen('imgs\\empty-battle.png', region=constants.BATTLE_REGION, confidence=0.8)
 
-def attacking_monster():
-    return pg.locateOnScreen('imgs\\red-target.png', region=constants.BATTLE_REGION, confidence=0.92) 
-    # or pg.locateOnScreen('imgs\\red-black-target.png', region=constants.BATTLE_REGION, confidence=0.72)
+def pixelMatchesColor(position, rgb):
+    x, y = position
+    if pg.pixelMatchesColor(x, y, rgb): 
+        return True
+    return False
   
 def kill_monster(): 
     while battle_empty() == None:
         pg.press('space')
-        print('monstro alvejado.')                           
-        while attacking_monster() != None: 
+        print('monstro alvejado.')  
+        x, y = constants.POSITION_MONSTER_TARGET                         
+        while pg.pixelMatchesColor(x, y, constants.RED_TARGET_COLOR, tolerance=99): 
             pg.sleep(1)
             print('esperando monstro morrer...')
         print('procurando outro monstro...')
@@ -30,11 +33,6 @@ def check_player_position():
     return pg.locateOnScreen('imgs\\point-player.png', region=constants.MINI_MAP_REGION, confidence=0.8)
 
 def get_loot():
-    # loot = pg.locateOnScreen('imgs\\dead-wasp.png', region=constants.LOOT_REGION, confidence=0.7)
-    # if loot:
-    #     x, y = pg.center(loot)
-    #     pg.moveTo(x, y)
-    #     pg.click(button="right")
     pg.hotkey("alt","q")
 
 def check_status(name, delay, position, rgb, button):
